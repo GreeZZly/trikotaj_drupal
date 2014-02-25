@@ -7,7 +7,7 @@ body, html {
 
 #navbar_background {
 	background-color: #B2E0ED;
-	height: 45px;
+	/*height: 45px;*/
 	border-top:1px solid #6BC4DC;
 	border-bottom:1px solid #98D3E3;
 
@@ -232,7 +232,7 @@ body, html {
 
 #header_background {
 	padding-top: 30px;
-	height: 140px;
+	/*height: 140px;*/
 	background-color: #F9F9F9;
 }
 
@@ -242,8 +242,10 @@ body, html {
 }
 
 #search {
-	margin-top: 10px;
+	margin-top: 70px;
 }
+
+
 #search_field {
 	width: 370px;
 	height: 25px;

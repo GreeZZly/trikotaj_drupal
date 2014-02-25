@@ -20,10 +20,29 @@
 /* SMACSS theme rules */
 /* @import "theme-A.css"; */
 /* @import "theme-B.css"; */
-#page, .region-bottom {
-margin-left: auto;
-margin-right: auto;
-width: 980px;
+
+
+#edit-search-block-form--2 {
+	width: 85%;
+}
+#search .block {
+	margin-bottom: 0;
 }
 
+#navbar .inline li {
+	padding: 0 1em;
+}
 
+#navbar .first {
+	background-image: url(/sites/all/themes/zenshop/include/images/home.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	text-indent: -9999px;
+}
+#commercial .block {
+	margin-bottom: 0;
+}
+
+.block-title {
+	text-align: center;
+}

@@ -104,6 +104,10 @@ regions[footer]         = Footer
 regions[bottom]         = Page bottom
 
 regions[hero]         	= Hero
+regions[header_left]    = Header Left
+regions[header_right]   = Header Right
+regions[soclikes]   	= Tell about me!
+
 
 ; The page_top and page_bottom regions are hidden, which means they will not
 ; show up on the blocks administration page. But they are required in order for
