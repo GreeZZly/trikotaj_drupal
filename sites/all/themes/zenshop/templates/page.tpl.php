@@ -16,7 +16,10 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
+<head>
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?105"></script>
 
+</head>
 <div id="page">
 
   <div id="header_background">
@@ -165,27 +168,70 @@
   </div>
 </div>
 <!-- СОЦИАЛЬНЫЕ КНОПКИ КОНЕЦ -->
-  <div id="main">
 
-	
-    <?php
-      // Render the sidebars to see if there's anything in them.
-      $sidebar_first  = render($page['sidebar_first']);
-      $sidebar_second = render($page['sidebar_second']);
-    ?>
-
-    <?php if ($sidebar_first || $sidebar_second): ?>
-      <aside class="sidebars">
-        <?php print $sidebar_first; ?>
-        <?php print $sidebar_second; ?>
-      </aside>
-    <?php endif; ?>
-
+<!-- LIKEBOX -->
+<div id="likebox_background">
+  <div id="likebox" class="center_block">
+    <?print render($page['likebox']);?>
   </div>
-
-  <?php print render($page['footer']); ?>
-
 </div>
+<!-- END. LIKEBOX -->
+
+<!-- BANNER 1 -->
+<div id="banner_background">
+  <div id="banner" class="center_block">
+    <?print render($page['banner1']);?>
+  </div>
+</div>
+<!-- END BANNER 1 -->
+
+<!-- BANNER 2 -->
+<div id="banner_background">
+  <div id="banner" class="center_block">
+    <?print render($page['banner2']);?>
+  </div>
+</div>
+<!-- END BANNER 2 -->
+
+<!-- MOSTSALE -->
+<div id="mostsale_background">
+  <div id="mostsale" class="center_block">
+    <?print render($page['mostsale']);?>
+  </div>
+</div>
+<!-- END MOSTSALE -->
+
+<!-- COUNTER -->
+<div id="counter_background">
+  <div id="counter" class="center_block">
+    <?print render($page['counter']);?>
+  </div>
+</div>
+<!-- END COUNTER -->
+
+<!-- MINIMAP -->
+<div id="minimap_background">
+  <div id="minimap" class="center_block">
+   <?print render($page['minimap']);?>
+  </div>
+</div>
+<!-- END MINIMAP -->
+<!-- FOOTER -->
+<div id="footer_background">
+  <div id="footer" class="center_block">
+    <div id="copyright">Copyright © 2014г. Мой любимый трикотаж</div>
+    <a href="http://sellingsites.pro"><div id="ss"></div></a>
+  <?php print render($page['footer']); ?>
+  </div>
+</div>
+<!-- RedHelper -->
+<script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async" 
+  src="https://web.redhelper.ru/service/main.js?c=tricotag21">
+</script> 
+<!--/Redhelper -->
+<!-- END FOOTER -->
+
+
 
 <?php print render($page['bottom']); ?>
 

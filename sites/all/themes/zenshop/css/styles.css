@@ -40,7 +40,12 @@
 	text-indent: -9999px;
 }
 #commercial .block {
-	margin-bottom: 0;
+	margin-bottom: -8px;
+}
+
+#commercial .block  img {
+	display: block;
+	margin: 0 auto;
 }
 
 .block-title {

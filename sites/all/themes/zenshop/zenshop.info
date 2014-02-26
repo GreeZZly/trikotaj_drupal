@@ -69,10 +69,11 @@ stylesheets[all][] = include/style/counter.css
 
 ; Optionally add some JavaScripts to your theme.
 
+scripts[] = include/js/jquery.min.js
 ;scripts[] = js/script.js
+
 scripts[] = include/js/script.js
 scripts[] = include/js/counter.js
-scripts[] = include/js/jquery.min.js
 
 
 
@@ -96,7 +97,7 @@ regions[header]         = Header
 regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
 regions[help]           = Help
-regions[pkv_region]    = PKV_Region
+regions[pkv_region]    	= PKV_Region
 regions[content]        = Content
 regions[sidebar_first]  = First sidebar
 regions[sidebar_second] = Second sidebar
@@ -107,6 +108,13 @@ regions[hero]         	= Hero
 regions[header_left]    = Header Left
 regions[header_right]   = Header Right
 regions[soclikes]   	= Tell about me!
+regions[likebox]   		= Likebox
+regions[banner1]   		= Banner1
+regions[banner2]   		= Banner2
+regions[mostsale]   	= Mostsale
+regions[counter]   		= Counter
+regions[minimap]   		= Minimap
+
 
 
 ; The page_top and page_bottom regions are hidden, which means they will not
