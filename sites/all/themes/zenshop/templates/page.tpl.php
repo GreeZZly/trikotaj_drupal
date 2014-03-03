@@ -68,11 +68,35 @@
                 </nav>
               <?php endif; ?>
             </div>
-            <div id="cart">
-              <div id="cart_title">Корзина</div>
-              <div id="cart_items">Товары: <b>0</b></div>
-              <div id="cart_summ">Сумма: <b>0</b></div>
-            </div>
+
+			<div id="banana-cart">
+              <div class="block-name"><a href="cart">Корзина</a></div>
+              <?php 
+
+              $asd = module_invoke('commerce_cart','block_view',0);
+                          
+              $data_string = $asd['content']; 
+
+             	      $data_sum_tpl = "~\"line-item-quantity-raw\">(.*?</span>)~is";
+                      if (preg_match($data_sum_tpl, $data_string, $match))  {
+                           $data_sum = trim($match[1]);
+                           print '<div class="summ-it">Товары:' .$data_sum .'</div>';
+		              }
+		              else{
+		              	print '<div class="summ-it">Товары: 0</div>';
+		              }		          
+		              $data_sum_tpl = "~\"line-item-total-raw\">(.*?</span>)~is";
+		              if (preg_match($data_sum_tpl, $data_string, $match))  {
+		                 $data_sum = trim($match[1]);
+		                 $data_sum = str_replace(',00',' ',$data_sum);
+		                 print '<div class="summ-tot">Сумма: ' .$data_sum .'</div>';
+		              }
+		              else{
+		              	print '<div class="summ-tot">Сумма: 0 руб.</div>';
+		              }
+            ?>
+          </div>
+		  
             <?php print render($page['header_right']); ?>
           </div>
         </li>
