@@ -114,6 +114,8 @@ regions[banner2]   		= Banner2
 regions[mostsale]   	= Mostsale
 regions[counter]   		= Counter
 regions[minimap]   		= Minimap
+regions[new_incomes]   	= Новые поступления
+regions[pusto_mesto]   	= Пустой блок
 
 
 

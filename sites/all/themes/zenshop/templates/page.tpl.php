@@ -20,6 +20,7 @@
 <script type="text/javascript" src="//vk.com/js/api/openapi.js?105"></script>
 
 </head>
+
 <div id="page">
 
   <div id="header_background">
@@ -48,10 +49,13 @@
         </li>
         <li>
           <div id="header_right">
+            <?if ( !$user->uid ){?>
             <div id="logistr">
-             <!--  <div id="registr">Регистрация</div>
+              <a href="/user/register"><div id="registr">Регистрация</div></a>
               <div> | </div>
-              <div id="login">Вход</div> -->
+              <a href="/user"><div id="login">Вход</div></a>
+            </div>
+            <?}?>
               <?php if ($secondary_menu): ?>
                 <nav class="header__secondary-menu" id="secondary-menu" role="navigation">
                   <?php print theme('links__system_secondary_menu', array(
@@ -67,44 +71,45 @@
                   )); ?>
                 </nav>
               <?php endif; ?>
+              <div id="banana-cart">
+                    <div class="block-name"><a href="cart">Корзина</a></div>
+                    <?php 
+
+                    $asd = module_invoke('commerce_cart','block_view',0);
+                                
+                    $data_string = $asd['content']; 
+
+                          $data_sum_tpl = "~\"line-item-quantity-raw\">(.*?</span>)~is";
+                            if (preg_match($data_sum_tpl, $data_string, $match))  {
+                                 $data_sum = trim($match[1]);
+                                 print '<div class="summ-it">Товары:' .$data_sum .'</div>';
+                        }
+                        else{
+                          print '<div class="summ-it">Товары: 0</div>';
+                        }             
+                        $data_sum_tpl = "~\"line-item-total-raw\">(.*?</span>)~is";
+                        if (preg_match($data_sum_tpl, $data_string, $match))  {
+                           $data_sum = trim($match[1]);
+                           $data_sum = str_replace(',00',' ',$data_sum);
+                           print '<div class="summ-tot">Сумма: ' .$data_sum .'</div>';
+                        }
+                        else{
+                          print '<div class="summ-tot">Сумма: 0 руб.</div>';
+                        }
+                  ?>
+                </div>
             </div>
 
-			<div id="banana-cart">
-              <div class="block-name"><a href="cart">Корзина</a></div>
-              <?php 
-
-              $asd = module_invoke('commerce_cart','block_view',0);
-                          
-              $data_string = $asd['content']; 
-
-             	      $data_sum_tpl = "~\"line-item-quantity-raw\">(.*?</span>)~is";
-                      if (preg_match($data_sum_tpl, $data_string, $match))  {
-                           $data_sum = trim($match[1]);
-                           print '<div class="summ-it">Товары:' .$data_sum .'</div>';
-		              }
-		              else{
-		              	print '<div class="summ-it">Товары: 0</div>';
-		              }		          
-		              $data_sum_tpl = "~\"line-item-total-raw\">(.*?</span>)~is";
-		              if (preg_match($data_sum_tpl, $data_string, $match))  {
-		                 $data_sum = trim($match[1]);
-		                 $data_sum = str_replace(',00',' ',$data_sum);
-		                 print '<div class="summ-tot">Сумма: ' .$data_sum .'</div>';
-		              }
-		              else{
-		              	print '<div class="summ-tot">Сумма: 0 руб.</div>';
-		              }
-            ?>
-          </div>
+      			
 		  
             <?php print render($page['header_right']); ?>
-          </div>
         </li>
         <li class="helper"></li>
       </ul>
       <?php print render($page['header']); ?>
+          </div>
     </div>
-  </div>
+  <!-- </div> -->
   
 <!-- НАВИГАЦИОННЫЙ БАР -->
 
@@ -161,7 +166,8 @@
       <?php print render($title_prefix); ?>
      
       <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
+
+      <?php print $messages;?>
       <?php print render($tabs); ?>
       <?php print render($page['help']); ?>
       <?php if ($action_links): ?>
@@ -197,6 +203,7 @@
 <!-- контент  -->  
 
 <!-- ОТЗЫВЫ  -->
+<?php if (!empty($page['reviews'])){?>
 <div id="reviews_background">
   <div id="reviews" class="center_block">
       <?php //надо так 
@@ -229,6 +236,7 @@
     </ul> -->
   </div>
 </div>
+<?}?>
 <!-- ОТЗЫВЫ КОНЕЦ -->
 
 <!-- СОЦИАЛЬНЫЕ КНОПКИ -->
@@ -243,49 +251,69 @@
 <!-- СОЦИАЛЬНЫЕ КНОПКИ КОНЕЦ -->
 
 <!-- LIKEBOX -->
+<?php if (!empty($page['likebox'])){?>
 <div id="likebox_background">
   <div id="likebox" class="center_block">
     <?print render($page['likebox']);?>
   </div>
 </div>
+<?}?>
 <!-- END. LIKEBOX -->
 
 <!-- BANNER 1 -->
+<?php if (!empty($page['banner1'])){?>
 <div id="banner_background">
   <div id="banner" class="center_block">
     <?print render($page['banner1']);?>
   </div>
 </div>
+<?}?>
 <!-- END BANNER 1 -->
 
+<!-- NEW INCOMES -->
+<?php if (!empty($page['new_incomes'])){?>
+<div id="mostsale_background">
+   <div id="mostsale" class="center_block">
+     <?print render($page['new_incomes']);?>
+   </div>
+</div>
+<?}?>
+<!-- END NEW INCOMES -->
+
 <!-- BANNER 2 -->
+
 <div id="banner_background">
   <div id="banner" class="center_block">
     <?print render($page['banner2']);?>
   </div>
 </div>
+
 <!-- END BANNER 2 -->
 
 <!-- MOSTSALE -->
+<?php if (!empty($page['mostsale'])){?>
 <div id="mostsale_background">
   <div id="mostsale" class="center_block">
     <?print render($page['mostsale']);?>
   </div>
 </div>
+<?}?>
 <!-- END MOSTSALE -->
 
 <!-- COUNTER -->
+<?php if (!empty($page['counter'])){?>
 <div id="counter_background">
   <div id="counter" class="center_block">
     <?print render($page['counter']);?>
   </div>
 </div>
+<?}?>
 <!-- END COUNTER -->
 
 <!-- MINIMAP -->
 <div id="minimap_background">
   <div id="minimap" class="center_block">
-   <?print render($page['minimap']);?>
+   <?php print render($page['minimap']);?>
   </div>
 </div>
 <!-- END MINIMAP -->

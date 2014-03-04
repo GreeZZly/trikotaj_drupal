@@ -29,6 +29,7 @@
             left: 0;
             width: 69px;
             height: 105px;
+            line-height: 105px;
             overflow: hidden;
         }
         .counter_element .visible{
