@@ -236,7 +236,7 @@
     </ul> -->
   </div>
 </div>
-<?}?>
+<?php } ?>
 <!-- ОТЗЫВЫ КОНЕЦ -->
 
 <!-- СОЦИАЛЬНЫЕ КНОПКИ -->
@@ -257,7 +257,7 @@
     <?print render($page['likebox']);?>
   </div>
 </div>
-<?}?>
+<?php } ?>
 <!-- END. LIKEBOX -->
 
 <!-- BANNER 1 -->
@@ -267,7 +267,7 @@
     <?print render($page['banner1']);?>
   </div>
 </div>
-<?}?>
+<?php } ?>
 <!-- END BANNER 1 -->
 
 <!-- NEW INCOMES -->
@@ -277,7 +277,7 @@
      <?print render($page['new_incomes']);?>
    </div>
 </div>
-<?}?>
+<?php } ?>
 <!-- END NEW INCOMES -->
 
 <!-- BANNER 2 -->
@@ -297,7 +297,7 @@
     <?print render($page['mostsale']);?>
   </div>
 </div>
-<?}?>
+<?php } ?>
 <!-- END MOSTSALE -->
 
 <!-- COUNTER -->
@@ -307,7 +307,7 @@
     <?print render($page['counter']);?>
   </div>
 </div>
-<?}?>
+<?php } ?>
 <!-- END COUNTER -->
 
 <!-- MINIMAP -->
