@@ -133,3 +133,11 @@ body.not-front #pusto_mesto_cvetno{
 	display: block;
 	margin: 0 auto;
 }
+
+.node-product-display [class*="commerce-product"]:not(.commerce-product-field-field-image-prod){
+	width: 460px;
+	float: right;
+}
+.node-product-display .commerce-product-field-field-image-prod  {
+	float: left;
+}

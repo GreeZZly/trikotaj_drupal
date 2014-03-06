@@ -122,7 +122,133 @@
     <?php endif; ?>
 
   </div>
+<<<<<<< HEAD
 
+=======
+</div>
+<!-- контент  -->  
+
+<!-- ОТЗЫВЫ  -->
+<?php if (!empty($page['reviews'])){?>
+<div id="reviews_background">
+  <div id="reviews" class="center_block">
+      <?php //надо так 
+    print render($page['pkv_region']); 
+    ?>
+    <!-- <div class="block_title">Отзывы</div>
+    <ul>
+      <li>
+        <div class="reviews_item">
+          <div class="reviews_item_pic"><img src="/sites/all/themes/zenshop/include/images/rev1.png"></div>
+          <div class="reviewer_name">Настя</div>
+          <div class="review_item_text">"Выбор просто замечательный! Для прогулки по городу, встречи в кафе с друзьями... Я нашла миллион идей для своего образа. Мама тоже очень..."</div>
+        </div>
+      </li>
+      <li>
+        <div class="reviews_item">
+          <div class="reviews_item_pic"><img src="/sites/all/themes/zenshop/include/images/rev2.png"></div>
+          <div class="reviewer_name">Марина</div>
+          <div class="review_item_text">"Выбор этого магазина дает мне быть разной и неповторимой. На долгожданный вечер с любимым человеком просто необходимо выбрать..."</div>
+        </div>
+      </li>
+      <li>
+        <div class="reviews_item">
+          <div class="reviews_item_pic"><img src="/sites/all/themes/zenshop/include/images/rev3.png"></div>
+          <div class="reviewer_name">Катя</div>
+          <div class="review_item_text">"Для учебы подойдет удобная и строгая одежда. А ведь еще нужно решить, в чем пойти на вечеринку! Здесь я нашла для себя то, что искала для создания..."</div>
+        </div>
+      </li>
+      <li class="helper"></li>
+    </ul> -->
+  </div>
+</div>
+<?php } ?>
+<!-- ОТЗЫВЫ КОНЕЦ -->
+
+<!-- СОЦИАЛЬНЫЕ КНОПКИ -->
+<?php if (!empty($page['soclikes'])){?>
+<div id="soclikes_background">
+  <div class="center_block" id="soclikes">
+    
+      <?print render($page['soclikes']);?>
+  </div>
+</div>
+<?php }?>
+<!-- СОЦИАЛЬНЫЕ КНОПКИ КОНЕЦ -->
+
+<!-- LIKEBOX -->
+<?php if (!empty($page['likebox'])){?>
+<div id="likebox_background">
+  <div id="likebox" class="center_block">
+    <?print render($page['likebox']);?>
+  </div>
+</div>
+<?php } ?>
+<!-- END. LIKEBOX -->
+
+<!-- BANNER 1 -->
+<?php if (!empty($page['banner1'])){?>
+<div id="banner_background">
+  <div id="banner" class="center_block">
+    <?print render($page['banner1']);?>
+  </div>
+</div>
+<?php } ?>
+<!-- END BANNER 1 -->
+
+<!-- NEW INCOMES -->
+<?php if (!empty($page['new_incomes'])){?>
+<div id="mostsale_background">
+   <div id="mostsale" class="center_block">
+     <?print render($page['new_incomes']);?>
+   </div>
+</div>
+<?php } ?>
+<!-- END NEW INCOMES -->
+
+<!-- BANNER 2 -->
+
+<div id="banner_background">
+  <div id="banner" class="center_block">
+    <?print render($page['banner2']);?>
+  </div>
+</div>
+
+<!-- END BANNER 2 -->
+
+<!-- MOSTSALE -->
+<?php if (!empty($page['mostsale'])){?>
+<div id="mostsale_background">
+  <div id="mostsale" class="center_block">
+    <?print render($page['mostsale']);?>
+  </div>
+</div>
+<?php } ?>
+<!-- END MOSTSALE -->
+
+<!-- COUNTER -->
+<?php if (!empty($page['counter'])){?>
+<div id="counter_background">
+  <div id="counter" class="center_block">
+    <?print render($page['counter']);?>
+  </div>
+</div>
+<?php } ?>
+<!-- END COUNTER -->
+
+<!-- MINIMAP -->
+<div id="minimap_background">
+  <div id="minimap" class="center_block">
+   <?php print render($page['minimap']);?>
+  </div>
+</div>
+<!-- END MINIMAP -->
+<!-- FOOTER -->
+<div id="footer_background">
+  <div id="footer" class="center_block">
+    <div id="copyright">Copyright © 2014г. Мой любимый трикотаж</div>
+    <a href="http://sellingsites.pro"><div id="ss"></div></a>
+>>>>>>> 791afa18c4f9e9d33a40ad175297e1cadf60374e
   <?php print render($page['footer']); ?>
 
 </div>
